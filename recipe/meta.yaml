@@ -1,5 +1,5 @@
 {% set name = "pylablib" %}
-{% set version = "1.3.1" %}
+{% set version = "1.3.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pylablib-{{ version }}.tar.gz
-  sha256: a7946644dd4a3134f8a70e8c2816f22b1c49e0a76addec42d28a441496e65bcd
+  sha256: 79442928fca885c6ee856559e13c401264250d26790a8381ee44de9757d413fc
 
 build:
   number: 0
