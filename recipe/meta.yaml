@@ -11,6 +11,7 @@ source:
   sha256: d76c07b4634b6a0ab689e6aa10436bd228dc64834611e895bc8f4812084da2aa
 
 build:
+  skip: true  # [py<36]
   number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,7 +22,6 @@ requirements:
     - python                                # [build_platform != target_platform]
   host:
     - pip
-    - python >=3.6
   run:
     - numba
     - numpy
@@ -29,7 +29,6 @@ requirements:
     - pyqt >=5.9
     - pyqtgraph
     - pyserial
-    - python >=3.6
     - pyusb
     - pyvisa >=1.6
     - rpyc
