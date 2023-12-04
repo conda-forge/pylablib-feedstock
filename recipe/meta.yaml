@@ -11,8 +11,7 @@ source:
   sha256: d76c07b4634b6a0ab689e6aa10436bd228dc64834611e895bc8f4812084da2aa
 
 build:
-  number: 1
-  noarch: python
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -20,7 +19,6 @@ requirements:
     - {{ compiler("c") }}
     - cross-python_{{ target_platform }}    # [build_platform != target_platform]
     - python                                # [build_platform != target_platform]
-    - cython                                # [build_platform != target_platform]
   host:
     - pip
     - python >=3.6
