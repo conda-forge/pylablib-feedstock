@@ -1,5 +1,5 @@
 {% set name = "pylablib" %}
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 
 
 package:
@@ -8,16 +8,17 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pylablib-{{ version }}.tar.gz
-  sha256: d76c07b4634b6a0ab689e6aa10436bd228dc64834611e895bc8f4812084da2aa
+  sha256: a488bfc1384a98f8f7191ecf79f4b3bdff879b4811e138ae61856050c385fa29
 
 build:
   skip: true  # [py<36]
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler("c") }}
+    - {{ stdlib("c") }}
     - cross-python_{{ target_platform }}    # [build_platform != target_platform]
     - python                                # [build_platform != target_platform]
   host:
