@@ -24,6 +24,9 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
+    - wheel
+    - cython 3.0.12
   run:
     - python
     - numba
